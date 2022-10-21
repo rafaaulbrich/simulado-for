@@ -9,11 +9,26 @@
 
     //ENTRADA
 
+    let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
 
     //PROCESSAMENTO
 
+    let soma = 0;
+
+    for(let preco of precoKgArroz) {
+        soma = soma + preco;
+    }
+
+    let media = (soma / precoKgArroz.length).toFixed(2);
+
+    let maiorPreco = precoKgArroz.sort((a,b) => b-a)[0];
+    let menorPreco = precoKgArroz.sort((a,b) => a-b)[0];
 
     //SAÍDA
+
+    document.write(`a média do preço do kg de arroz é de R$${media} reais</br>`);
+    document.write(`o maior preço do kg é R$${maiorPreco} reais</br>`);
+    document.write(`o menor preço do kg é R$${menorPreco} reais`);
 
 
 </script>

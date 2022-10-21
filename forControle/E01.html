@@ -8,11 +8,25 @@
 
     //ENTRADA
 
+    let quantAlunos = Number(prompt("informe a quantidade de alunos que você possui"));
+    let meninos = [];
+    let meninas = [];
 
     //PROCESSAMENTO
 
+    for(contador = 1; contador <= quantAlunos; contador++) {
+        let nomeAlunos = prompt("infome o nome dos seus alunos");
+        let genero = prompt("qual o gênero do aluno? f-feminino; m-masculino;").toLowerCase();
+        if(genero === "f") {
+            meninas.push(nomeAlunos);
+        } else {
+            meninos.push(nomeAlunos);
+        }
+    }
 
     //SAÍDA
 
+    document.write(`seus alunos meninos são: ${meninos.sort().join(", ")}</br>`);
+    document.write(`suas alunas meninas são: ${meninas.sort().join(", ")}`);
     
 </script>

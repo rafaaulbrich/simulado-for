@@ -13,11 +13,24 @@
 
     //ENTRADA
 
+    let quantAbasteceu = Number(prompt("quantas vezes você abasteceu?"));
+    let distancia = parseInt(prompt("quantos km's você percorreu?"));
 
     //PROCESSAMENTO
 
+    let totalCombustivel = 0;
+
+    for(contador = 1; contador <= quantAbasteceu; contador++) {
+        let custo = Number(prompt(`quanto custou seu abstecimento ${contador}?`));
+        totalCombustivel = totalCombustivel + custo;
+    }
+
+    let custoCadaKM = totalCombustivel / distancia;
 
     //SAÍDA
 
+    document.write(`o custo de cada quilômetro percorrido é de R$${custoCadaKM} reais</br>`);
+    document.write(`o custo total de todos os abastecimentos é de R$${totalCombustivel} reais</br>`);
+    document.write(`a quilometragem total percorrida é de ${distancia} km's`);
 
 </script>

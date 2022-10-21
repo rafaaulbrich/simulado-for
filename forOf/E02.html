@@ -9,11 +9,19 @@
 
     //ENTRADA
 
+    let nomePessoas = ["Eduardo da Silva", "Eduardo Montandon", "Lucas Eduardo", "José da Silva", "Rafael Gonçalves"];
+    let familiaSilva = [];
 
     //PROCESSAMENTO
 
+    for(let integrante of nomePessoas) {
+        if(integrante.search("Silva") >= 0) {
+            familiaSilva.push(integrante)
+        }
+    }
 
     //SAÍDA
 
+    document.write(`os integrantes da família Silva são: ${familiaSilva.join(", ")} e possuem ${familiaSilva.length} integrantes.`);
 
 </script>

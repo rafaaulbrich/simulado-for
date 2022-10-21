@@ -9,11 +9,24 @@
 
     //ENTRADA
 
+    let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
+    let livrosFiccao = [];
+    let livrosTecnico = [];
 
     //PROCESSAMENTO
 
+    for(let livros of listaLivros) {
+        let tipoLivro = prompt(`o livro ${livros} é um livro técnico ou um livro de ficção? técnico = t; ficção = c;`).toLowerCase();
+        if(tipoLivro === "t") {
+            livrosTecnico.push(livros);
+        } else {
+            livrosFiccao.push(livros);
+        }
+    }
 
     //SAÍDA
 
+    document.write(`sua lista de livros de ficção possue ${livrosFiccao.length} livros, sendo eles: ${livrosFiccao}</br>`);
+    document.write(`sua lista de livros técnicos possue ${livrosTecnico.length} livros, sendo eles: ${livrosTecnico}`);
 
 </script>
